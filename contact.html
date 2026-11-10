@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Favour Adedokun - Send a message, peer collaboration or academic inquiry" />
+  <title>Contact Me | Favour Adedokun - Software Engineering</title>
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Site Header & Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand">
+          <span class="nav-brand-icon">🌸</span>
+          <span>Favour.dev</span>
+          <span class="nav-brand-sub">MIVA SE</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link"><span>🏡</span> Home</a></li>
+          <li><a href="about.html" class="nav-link"><span>👩🏾‍💻</span> About Me</a></li>
+          <li><a href="projects.html" class="nav-link"><span>🚀</span> Projects</a></li>
+          <li><a href="planner.html" class="nav-link"><span>📅</span> Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link active"><span>💌</span> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section-padding">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <header class="section-header">
+        <span class="badge">💌 Let's Connect</span>
+        <h2>Get in Touch with Favour</h2>
+        <p>
+          Whether you have questions about my projects, want to collaborate on software engineering ideas, 
+          or discuss course concepts, drop a message below!
+        </p>
+      </header>
+
+      <!-- Contact Layout: Left Info Card, Right Form -->
+      <div class="contact-layout">
+        
+        <!-- Left: Contact Details & Campus Links -->
+        <aside class="contact-info-card">
+          <h3><span>🌸</span> Student Contact Details</h3>
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Feel free to connect directly through my student channels or socials.
+          </p>
+
+          <ul class="contact-methods">
+            <li class="contact-item">
+              <div class="contact-icon" aria-hidden="true">📧</div>
+              <div class="contact-text">
+                <h4>Student Email</h4>
+                <p><a href="mailto:adedokunfavouroyinade@miva.university">adedokunfavouroyinade@miva.university</a></p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon" aria-hidden="true">🎓</div>
+              <div class="contact-text">
+                <h4>Department &amp; University</h4>
+                <p>Software Engineering • MIVA Open University, Abuja, Nigeria</p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon" aria-hidden="true">🐙</div>
+              <div class="contact-text">
+                <h4>GitHub Profile</h4>
+                <p><a href="https://github.com/adedokunfavouroyinade" target="_blank" rel="noopener noreferrer">github.com/adedokunfavouroyinade</a></p>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon" aria-hidden="true">💬</div>
+              <div class="contact-text">
+                <h4>Live Web Chat</h4>
+                <p><a href="https://mega-frontend-zeta.vercel.app" target="_blank" rel="noopener noreferrer">Test Mega Chat Room</a></p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Academic Assurance Box -->
+          <div style="margin-top: 1.5rem; padding: 1.15rem; background: var(--bg-alt); border-radius: var(--radius-md); border: 1px dashed var(--border-color); font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: var(--text-brand);">🛡️ Form Validation Protocol:</strong>
+            <p style="margin-top: 0.35rem;">
+              This form adheres strictly to COS 106 requirements. Client-side JavaScript enforces complete fields, 
+              valid email structure, and strictly digits-only phone numbers.
+            </p>
+          </div>
+        </aside>
+
+        <!-- Right: Interactive Validated Contact Form -->
+        <section class="contact-form-card">
+          <h3 style="font-size: 1.35rem; color: var(--text-brand); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>✍️</span> Send a Direct Message
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            All fields are mandatory and validated dynamically with vanilla JavaScript.
+          </p>
+
+          <!-- Feedback Banners -->
+          <div id="alertSuccess" class="alert-box alert-success" role="alert" aria-live="assertive"></div>
+          <div id="alertError" class="alert-box alert-danger" role="alert" aria-live="assertive"></div>
+
+          <form id="contactForm" novalidate>
+            
+            <!-- Field 1: Full Name -->
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name *</label>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                class="form-control" 
+                placeholder="e.g. Favour Adedokun" 
+                autocomplete="name" 
+                required 
+              />
+              <span id="nameError" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Field 2: Email Address -->
+            <div class="form-group">
+              <label for="emailAddress" class="form-label">Email Address *</label>
+              <input 
+                type="email" 
+                id="emailAddress" 
+                name="emailAddress" 
+                class="form-control" 
+                placeholder="e.g. yourname@example.com" 
+                autocomplete="email" 
+                required 
+              />
+              <span id="emailError" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Field 3: Phone Number (Digits only requirement) -->
+            <div class="form-group">
+              <label for="phoneNumber" class="form-label">Phone Number (Digits Only) *</label>
+              <input 
+                type="tel" 
+                id="phoneNumber" 
+                name="phoneNumber" 
+                class="form-control" 
+                placeholder="e.g. 08123456789 (digits only)" 
+                autocomplete="tel" 
+                required 
+              />
+              <span id="phoneError" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Field 4: Message -->
+            <div class="form-group">
+              <label for="messageText" class="form-label">Your Message *</label>
+              <textarea 
+                id="messageText" 
+                name="messageText" 
+                class="form-control" 
+                rows="5" 
+                placeholder="Write your message, project feedback, or inquiry here..." 
+                required
+              ></textarea>
+              <span id="messageError" class="error-msg" aria-live="polite"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+              <span>💌</span> Submit Message
+            </button>
+          </form>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>🌸 Favour Adedokun</h4>
+          <p>
+            Undergraduate Software Engineering Student at MIVA Open University. 
+            Passionate about modern web standards, human-friendly UI design, and scalable frontend code.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Academic Details</h5>
+          <ul class="footer-links">
+            <li><strong>Institution:</strong> MIVA Open University</li>
+            <li><strong>Course:</strong> COS 106 Web Tech</li>
+            <li><strong>Matric:</strong> 301898902</li>
+            <li><strong>Level:</strong> 100 Level (2025)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="currentYear">2025</span> Favour Adedokun. All Rights Reserved. | MIVA Open University COS 106 Term Project.
+        </p>
+        <p>
+          Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript 💖
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

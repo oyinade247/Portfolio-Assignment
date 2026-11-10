@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <defs>
+    <linearGradient id="megaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="16" fill="url(#megaBg)"/>
+
+  <!-- Top Window Bar -->
+  <rect x="0" y="0" width="600" height="46" rx="16" fill="#18181b" opacity="0.6"/>
+  <circle cx="24" cy="23" r="6" fill="#fb7185"/>
+  <circle cx="44" cy="23" r="6" fill="#fbbf24"/>
+  <circle cx="64" cy="23" r="6" fill="#34d399"/>
+  <text x="90" y="28" font-family="sans-serif" font-size="13" fill="#e0e7ff" font-weight="bold">💬 Mega Chat App</text>
+  <text x="430" y="28" font-family="monospace" font-size="11" fill="#fda4af">mega-frontend-zeta.vercel.app</text>
+
+  <!-- Sidebar -->
+  <rect x="16" y="58" width="170" height="306" rx="12" fill="#1e1b4b" opacity="0.7" stroke="#4338ca" stroke-width="1"/>
+  <text x="30" y="88" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f472b6">CHANNELS</text>
+  
+  <rect x="24" y="102" width="154" height="32" rx="8" fill="#312e81"/>
+  <text x="36" y="123" font-family="sans-serif" font-size="12" fill="#ffffff" font-weight="bold"># general-chat</text>
+
+  <rect x="24" y="142" width="154" height="32" rx="8" fill="transparent"/>
+  <text x="36" y="163" font-family="sans-serif" font-size="12" fill="#c7d2fe"># miva-software-eng</text>
+
+  <rect x="24" y="182" width="154" height="32" rx="8" fill="transparent"/>
+  <text x="36" y="203" font-family="sans-serif" font-size="12" fill="#c7d2fe"># cos-106-web-tech</text>
+
+  <text x="30" y="240" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f472b6">DIRECT MESSAGES</text>
+  <circle cx="36" cy="265" r="5" fill="#22c55e"/>
+  <text x="48" y="269" font-family="sans-serif" font-size="12" fill="#e0e7ff">Dr. Aisha (Tutor)</text>
+
+  <circle cx="36" cy="295" r="5" fill="#22c55e"/>
+  <text x="48" y="299" font-family="sans-serif" font-size="12" fill="#e0e7ff">Daniel (Peer)</text>
+
+  <!-- Main Chat Area -->
+  <rect x="198" y="58" width="386" height="306" rx="12" fill="#0f172a" opacity="0.6" stroke="#334155" stroke-width="1"/>
+
+  <!-- Chat Header -->
+  <rect x="198" y="58" width="386" height="44" fill="#1e293b" opacity="0.8"/>
+  <text x="216" y="85" font-family="sans-serif" font-size="14" font-weight="bold" fill="#f8fafc"># cos-106-web-tech</text>
+  <circle cx="556" cy="80" r="4" fill="#22c55e"/>
+  <text x="515" y="84" font-family="sans-serif" font-size="11" fill="#94a3b8">18 online</text>
+
+  <!-- Incoming Message 1 -->
+  <circle cx="226" cy="130" r="16" fill="#818cf8"/>
+  <text x="221" y="135" font-family="sans-serif" font-size="12" fill="#ffffff" font-weight="bold">D</text>
+  <rect x="250" y="116" width="220" height="46" rx="14" fill="#334155"/>
+  <text x="264" y="135" font-family="sans-serif" font-size="12" fill="#ffffff">Hey Favour! Are you done with</text>
+  <text x="264" y="151" font-family="sans-serif" font-size="12" fill="#ffffff">the COS 106 term project?</text>
+
+  <!-- Outgoing Message (Favour) -->
+  <rect x="310" y="174" width="256" height="52" rx="14" fill="url(#bubbleGrad)"/>
+  <text x="324" y="194" font-family="sans-serif" font-size="12" fill="#ffffff" font-weight="500">Yes! Built responsive pages with</text>
+  <text x="324" y="210" font-family="sans-serif" font-size="12" fill="#ffffff">planner, validation &amp; cute styles! 🌸✨</text>
+  <circle cx="552" cy="214" r="3" fill="#ffffff" opacity="0.9"/>
+  <circle cx="558" cy="214" r="3" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Incoming Message 2 -->
+  <circle cx="226" cy="256" r="16" fill="#818cf8"/>
+  <text x="221" y="261" font-family="sans-serif" font-size="12" fill="#ffffff" font-weight="bold">D</text>
+  <rect x="250" y="242" width="200" height="36" rx="14" fill="#334155"/>
+  <text x="264" y="265" font-family="sans-serif" font-size="12" fill="#ffffff">Love that! Mega chat is smooth 🔥</text>
+
+  <!-- Input Bar -->
+  <rect x="214" y="310" width="354" height="40" rx="20" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="234" y="335" font-family="sans-serif" font-size="12" fill="#94a3b8">Type a friendly message...</text>
+  <circle cx="544" cy="330" r="14" fill="#f43f5e"/>
+  <text x="539" y="334" font-family="sans-serif" font-size="11" fill="#ffffff">➤</text>
+</svg>

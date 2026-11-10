@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Academic Portfolio and Student Management Platform for Favour Adedokun - Software Engineering at MIVA Open University" />
+  <title>Favour Adedokun | Software Engineering Portfolio &amp; Academic Planner</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  
+  <!-- External CSS Stylesheet (Rubric Requirement) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       Site Header & Responsive Navigation Bar
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand">
+          <span class="nav-brand-icon">🌸</span>
+          <span>Favour.dev</span>
+          <span class="nav-brand-sub">MIVA SE</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation Menu Links -->
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active"><span>🏡</span> Home</a></li>
+          <li><a href="about.html" class="nav-link"><span>👩🏾‍💻</span> About Me</a></li>
+          <li><a href="projects.html" class="nav-link"><span>🚀</span> Projects</a></li>
+          <li><a href="planner.html" class="nav-link"><span>📅</span> Academic Planner</a></li>
+          <li><a href="contact.html" class="nav-link"><span>💌</span> Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       Main Content: Homepage Hero & Overview
+       ========================================================================= -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Welcome Message & Bio -->
+          <article class="hero-intro">
+            <span class="badge">✨ COS 106 Practical Term Project</span>
+            <h1>
+              Hi, I'm <span class="highlight">Favour Adedokun</span> 🌸
+            </h1>
+            <p class="hero-tagline">
+              Software Engineering Student at MIVA Open University
+            </p>
+            <p class="hero-bio">
+              Welcome to my digital space! I am passionate about building responsive, human-centered web applications, 
+              real-time communication software, and intuitive interfaces. Explore my academic journey, real-world projects 
+              like <em>Mega Chat</em> and <em>Callerio Video Calls</em>, and test out my interactive student academic planner.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="hero-cta">
+              <a href="projects.html" class="btn btn-primary">✨ Explore My Projects</a>
+              <a href="planner.html" class="btn btn-outline">📅 Open Academic Planner</a>
+            </div>
+
+            <!-- Student Metadata Strip -->
+            <aside class="student-meta-strip">
+              <div class="meta-pill">
+                <span>🎓</span>
+                <div>
+                  <strong>Degree:</strong> B.Sc. Software Engineering
+                </div>
+              </div>
+              <div class="meta-pill">
+                <span>🏛️</span>
+                <div>
+                  <strong>Institution:</strong> MIVA Open University
+                </div>
+              </div>
+              <div class="meta-pill">
+                <span>🆔</span>
+                <div>
+                  <strong>Matric No:</strong> 301898902
+                </div>
+              </div>
+            </aside>
+          </article>
+
+          <!-- Right Column: Student Photograph & Badges -->
+          <aside class="hero-visual">
+            <div class="profile-card-wrapper">
+              <figure>
+                <img 
+                  src="assets/images/favour-adedokun.jpg" 
+                  alt="Photograph of Favour Adedokun, Software Engineering student at MIVA Open University" 
+                  class="profile-avatar-img"
+                  width="320"
+                  height="390"
+                />
+                <figcaption class="sr-only">Photograph of Favour Adedokun, Software Engineering student at MIVA Open University</figcaption>
+              </figure>
+
+              <!-- Floating Girlie Badges -->
+              <div class="floating-badge badge-top">
+                <span>💻</span> Frontend &amp; WebRTC
+              </div>
+              <div class="floating-badge badge-bottom">
+                <span>✨</span> 100L • First Class Mindset
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Multimedia Section: Audio Welcome (Rubric Requirement) -->
+    <section class="section-padding" style="background-color: var(--bg-alt); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+      <div class="container">
+        <header class="section-header">
+          <span class="badge">🎧 Multimedia Showcase</span>
+          <h2>Welcome Audio Note &amp; Greeting</h2>
+          <p>Click play below to listen to a brief audio welcome chime created for this academic portfolio.</p>
+        </header>
+
+        <div class="multimedia-card">
+          <div class="audio-icon-box" aria-hidden="true">
+            🎵
+          </div>
+          <div class="audio-content">
+            <h3>Favour's Audio Greeting &amp; Introduction</h3>
+            <p>Course: <strong>COS 106 – Introduction to Web Technologies</strong> | Audio format: WAV</p>
+            <!-- Semantic HTML5 Audio Element -->
+            <audio id="welcomeAudio" class="custom-audio-player" controls preload="metadata">
+              <source src="assets/media/welcome-audio.wav" type="audio/wav" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project & Features Overview Grid -->
+    <section class="section-padding">
+      <div class="container">
+        <header class="section-header">
+          <span class="badge">🎀 What You Will Find Here</span>
+          <h2>Platform Highlights</h2>
+          <p>Designed and structured specifically to satisfy every requirement of the COS 106 term project.</p>
+        </header>
+
+        <div class="features-grid">
+          <article class="feature-box">
+            <div class="feature-icon" aria-hidden="true">👩🏾‍💻</div>
+            <h3>About &amp; Academic Background</h3>
+            <p>Learn about my transition into software engineering, technical competencies, and view my registered semester course timetable.</p>
+            <p style="margin-top: 1rem;"><a href="about.html" class="btn btn-outline btn-sm">Read Bio →</a></p>
+          </article>
+
+          <article class="feature-box">
+            <div class="feature-icon" aria-hidden="true">🚀</div>
+            <h3>Real-World Projects</h3>
+            <p>Live applications built with passion, including Mega (Chat App) and Callerio (Video Calling), alongside academic web tools.</p>
+            <p style="margin-top: 1rem;"><a href="projects.html" class="btn btn-outline btn-sm">View Projects →</a></p>
+          </article>
+
+          <article class="feature-box">
+            <div class="feature-icon" aria-hidden="true">📅</div>
+            <h3>Interactive Task Planner</h3>
+            <p>A fully functional JavaScript academic task planner to add, complete, delete, and track university assignments and exams.</p>
+            <p style="margin-top: 1rem;"><a href="planner.html" class="btn btn-outline btn-sm">Try Planner →</a></p>
+          </article>
+        </div>
+
+        <!-- Video Presentation Showcase Card (Rubric: Multimedia video) -->
+        <article class="video-showcase-card">
+          <header style="padding: 1.5rem 1.75rem 0.5rem;">
+            <span class="badge">📹 Video Presentation</span>
+            <h3 style="font-size: 1.35rem; color: var(--text-brand); margin-top: 0.5rem;">
+              COS 106 Project Walkthrough Video Showcase
+            </h3>
+          </header>
+          <div class="video-container">
+            <!-- Semantic HTML5 Video Element with Poster -->
+            <video 
+              class="portfolio-video" 
+              controls 
+              poster="assets/images/video-poster.svg"
+              preload="none"
+            >
+              <source src="assets/media/demo-video.mp4" type="video/mp4" />
+              <p>Your browser does not support the video tag. Please view the project walkthrough directly.</p>
+            </video>
+          </div>
+          <footer class="video-caption-box">
+            <div>
+              <strong>Presentation:</strong> Responsive Web Design, Flexbox/Grid, and DOM Manipulation.
+            </div>
+            <a href="planner.html" class="btn btn-primary btn-sm">Test Academic Planner Now ✨</a>
+          </footer>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Site Footer
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <h4>🌸 Favour Adedokun</h4>
+          <p>
+            Undergraduate Software Engineering Student at MIVA Open University. 
+            Passionate about modern web standards, human-friendly UI design, and scalable frontend code.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Academic Details</h5>
+          <ul class="footer-links">
+            <li><strong>Institution:</strong> MIVA Open University</li>
+            <li><strong>Course:</strong> COS 106 Web Tech</li>
+            <li><strong>Matric:</strong> 301898902</li>
+            <li><strong>Level:</strong> 100 Level (2025)</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="currentYear">2025</span> Favour Adedokun. All Rights Reserved. | MIVA Open University COS 106 Term Project.
+        </p>
+        <p>
+          Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript 💖
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared Global Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
