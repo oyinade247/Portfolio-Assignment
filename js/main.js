@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const welcomeAudio = document.getElementById('welcomeAudio');
   if (welcomeAudio) {
     welcomeAudio.addEventListener('play', () => {
-      console.log('Favour\'s welcome audio note is playing ✨');
+      console.log('Audio playback initiated');
     });
   }
 });

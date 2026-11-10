@@ -61,7 +61,6 @@ function loadTasksFromStorage() {
     try {
       tasks = JSON.parse(saved);
     } catch (e) {
-      console.error('Error parsing stored tasks, resetting to default', e);
       tasks = [...initialStudentTasks];
     }
   } else {
@@ -75,7 +74,6 @@ function saveTasksToStorage() {
 }
 
 function setupEventListeners() {
-
   if (taskForm) {
     taskForm.addEventListener('submit', handleAddTask);
   }
@@ -173,9 +171,8 @@ function renderTasks() {
   if (filtered.length === 0) {
     taskListContainer.innerHTML = `
       <div class="empty-state">
-        <div class="empty-state-icon">🌸</div>
         <h4>No tasks found</h4>
-        <p>You have no ${currentFilter === 'all' ? '' : currentFilter} tasks on your planner right now. Keep shining!</p>
+        <p>There are currently no ${currentFilter === 'all' ? '' : currentFilter} tasks recorded on your planner.</p>
       </div>
     `;
     return;
@@ -206,8 +203,8 @@ function renderTasks() {
         <div class="task-info">
           <span class="task-text">${escapeHtml(task.title)}</span>
           <div class="task-meta">
-            <span class="badge" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">📚 ${escapeHtml(task.course)}</span>
-            <span>📅 ${escapeHtml(task.dueDate)}</span>
+            <span class="badge" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">${escapeHtml(task.course)}</span>
+            <span>Due: ${escapeHtml(task.dueDate)}</span>
             <span class="priority-pill ${priorityClass}">${escapeHtml(task.priority)}</span>
           </div>
         </div>
@@ -218,7 +215,7 @@ function renderTasks() {
         title="Delete task"
         aria-label="Delete task"
       >
-        🗑️ Delete
+        Delete
       </button>
     `;
 

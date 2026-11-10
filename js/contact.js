@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const alertError = document.getElementById('alertError');
 
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
   const phoneDigitsRegex = /^\d+$/;
 
   fullNameInput.addEventListener('input', () => clearFieldState(fullNameInput, nameError));
@@ -52,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fullNameValue = fullNameInput.value.trim();
     if (fullNameValue === '') {
-      setFieldError(fullNameInput, nameError, 'Please enter your full name (field cannot be empty).');
+      setFieldError(fullNameInput, nameError, 'Full name is required.');
       isValid = false;
     } else if (fullNameValue.length < 2) {
-      setFieldError(fullNameInput, nameError, 'Full name must be at least 2 characters.');
+      setFieldError(fullNameInput, nameError, 'Full name must contain at least 2 characters.');
       isValid = false;
     } else {
       setFieldValid(fullNameInput, nameError);
@@ -63,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const emailValue = emailInput.value.trim();
     if (emailValue === '') {
-      setFieldError(emailInput, emailError, 'Email address cannot be empty.');
+      setFieldError(emailInput, emailError, 'Email address is required.');
       isValid = false;
     } else if (!emailRegex.test(emailValue)) {
-      setFieldError(emailInput, emailError, 'Please enter a valid email address (e.g., student@miva.university).');
+      setFieldError(emailInput, emailError, 'Please enter a valid email address (e.g. name@example.com).');
       isValid = false;
     } else {
       setFieldValid(emailInput, emailError);
@@ -74,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const phoneValue = phoneInput.value.trim();
     if (phoneValue === '') {
-      setFieldError(phoneInput, phoneError, 'Phone number cannot be empty.');
+      setFieldError(phoneInput, phoneError, 'Phone number is required.');
       isValid = false;
     } else if (!phoneDigitsRegex.test(phoneValue)) {
-      setFieldError(phoneInput, phoneError, 'Phone number must contain only digits (0-9, no letters or symbols).');
+      setFieldError(phoneInput, phoneError, 'Phone number must contain only numeric digits (0-9).');
       isValid = false;
     } else if (phoneValue.length < 8 || phoneValue.length > 15) {
-      setFieldError(phoneInput, phoneError, 'Phone number must be between 8 and 15 digits long.');
+      setFieldError(phoneInput, phoneError, 'Phone number must be between 8 and 15 digits.');
       isValid = false;
     } else {
       setFieldValid(phoneInput, phoneError);
@@ -88,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const messageValue = messageInput.value.trim();
     if (messageValue === '') {
-      setFieldError(messageInput, messageError, 'Please write a message (field cannot be empty).');
+      setFieldError(messageInput, messageError, 'Message content is required.');
       isValid = false;
     } else if (messageValue.length < 10) {
       setFieldError(messageInput, messageError, 'Message must be at least 10 characters long.');
@@ -98,14 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (!isValid) {
-      alertError.textContent = '⚠️ Please correct the highlighted errors before submitting.';
+      alertError.textContent = 'Please review and correct the highlighted fields above.';
       alertError.style.display = 'block';
       return;
     }
 
     alertSuccess.innerHTML = `
-      🌸 <strong>Thank you, ${escapeHtml(fullNameValue)}!</strong> Your message has been sent successfully. 
-      Favour will get back to you at <em>${escapeHtml(emailValue)}</em> shortly!
+      <strong>Message Sent Successfully.</strong> Thank you, ${escapeHtml(fullNameValue)}. 
+      Your submission has been received and will be replied to at <em>${escapeHtml(emailValue)}</em>.
     `;
     alertSuccess.style.display = 'block';
 
