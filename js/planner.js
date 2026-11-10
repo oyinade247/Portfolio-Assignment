@@ -1,18 +1,3 @@
-/**
- * COS 106 - Introduction to Web Technologies
- * Script: planner.js
- * Author: Favour Adedokun (Matric: 301898902)
- * Purpose: Interactive Academic Planner & Task Management System.
- * Features:
- *   - Add academic tasks with Course, Title, Due Date, and Priority.
- *   - Toggle task completion status (done / undone).
- *   - Delete individual tasks.
- *   - Filter tasks by status (All / Pending / Completed).
- *   - Real-time stat counter calculation.
- *   - LocalStorage persistence across browser reloads.
- */
-
-// Default initial tasks for a MIVA Software Engineering 100-Level student
 const initialStudentTasks = [
   {
     id: 1731234001,
@@ -48,11 +33,9 @@ const initialStudentTasks = [
   },
 ];
 
-// In-memory array of task objects
 let tasks = [];
 let currentFilter = 'all';
 
-// DOM Elements
 const taskForm = document.getElementById('taskForm');
 const taskTitleInput = document.getElementById('taskTitle');
 const taskCourseSelect = document.getElementById('taskCourse');
@@ -60,26 +43,18 @@ const taskDueDateInput = document.getElementById('taskDueDate');
 const taskPrioritySelect = document.getElementById('taskPriority');
 const taskListContainer = document.getElementById('taskList');
 
-// Stats Counters
 const totalCountEl = document.getElementById('totalCount');
 const pendingCountEl = document.getElementById('pendingCount');
 const completedCountEl = document.getElementById('completedCount');
 
-// Filter Buttons
 const filterBtns = document.querySelectorAll('.filter-btn');
 
-/**
- * Initialize Planner on Page Load
- */
 document.addEventListener('DOMContentLoaded', () => {
   loadTasksFromStorage();
   setupEventListeners();
   renderTasks();
 });
 
-/**
- * Load tasks from LocalStorage or seed with initial tasks
- */
 function loadTasksFromStorage() {
   const saved = localStorage.getItem('miva_favour_academic_tasks');
   if (saved) {
@@ -95,23 +70,16 @@ function loadTasksFromStorage() {
   }
 }
 
-/**
- * Save current tasks array to LocalStorage
- */
 function saveTasksToStorage() {
   localStorage.setItem('miva_favour_academic_tasks', JSON.stringify(tasks));
 }
 
-/**
- * Setup All Event Listeners
- */
 function setupEventListeners() {
-  // Form Submission (Add Task)
+
   if (taskForm) {
     taskForm.addEventListener('submit', handleAddTask);
   }
 
-  // Filter Buttons
   filterBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       filterBtns.forEach((b) => b.classList.remove('active'));
@@ -121,16 +89,12 @@ function setupEventListeners() {
     });
   });
 
-  // Set today as default min date in the date picker
   if (taskDueDateInput) {
     const today = new Date().toISOString().split('T')[0];
     taskDueDateInput.setAttribute('min', today);
   }
 }
 
-/**
- * Handler for Adding a New Task
- */
 function handleAddTask(e) {
   e.preventDefault();
 
@@ -139,14 +103,12 @@ function handleAddTask(e) {
   const dueDate = taskDueDateInput.value;
   const priority = taskPrioritySelect.value;
 
-  // Validation
   if (!title) {
     alert('Please enter a task description.');
     taskTitleInput.focus();
     return;
   }
 
-  // Create new task object
   const newTask = {
     id: Date.now(),
     title: title,
@@ -156,21 +118,15 @@ function handleAddTask(e) {
     completed: false,
   };
 
-  // Add to tasks array
   tasks.unshift(newTask);
 
-  // Persist & Re-render
   saveTasksToStorage();
   renderTasks();
 
-  // Reset form
   taskForm.reset();
   taskTitleInput.focus();
 }
 
-/**
- * Toggle Task Completion Status
- */
 function toggleTaskCompletion(taskId) {
   tasks = tasks.map((task) => {
     if (task.id === taskId) {
@@ -183,9 +139,6 @@ function toggleTaskCompletion(taskId) {
   renderTasks();
 }
 
-/**
- * Delete a Task
- */
 function deleteTask(taskId) {
   const confirmDelete = confirm('Are you sure you want to delete this academic task?');
   if (!confirmDelete) return;
@@ -195,9 +148,6 @@ function deleteTask(taskId) {
   renderTasks();
 }
 
-/**
- * Update Dashboard Statistics
- */
 function updateStats() {
   const total = tasks.length;
   const completed = tasks.filter((t) => t.completed).length;
@@ -208,15 +158,11 @@ function updateStats() {
   if (completedCountEl) completedCountEl.textContent = completed;
 }
 
-/**
- * Render Tasks into the DOM based on active filter
- */
 function renderTasks() {
   updateStats();
 
   if (!taskListContainer) return;
 
-  // Filter tasks
   let filtered = tasks;
   if (currentFilter === 'pending') {
     filtered = tasks.filter((t) => !t.completed);
@@ -224,7 +170,6 @@ function renderTasks() {
     filtered = tasks.filter((t) => t.completed);
   }
 
-  // Handle Empty State
   if (filtered.length === 0) {
     taskListContainer.innerHTML = `
       <div class="empty-state">
@@ -236,10 +181,8 @@ function renderTasks() {
     return;
   }
 
-  // Clear existing list
   taskListContainer.innerHTML = '';
 
-  // Build task elements
   filtered.forEach((task) => {
     const item = document.createElement('div');
     item.className = `task-item ${task.completed ? 'completed' : ''}`;
@@ -279,13 +222,11 @@ function renderTasks() {
       </button>
     `;
 
-    // Event listener for checkbox
     const checkbox = item.querySelector('.task-checkbox');
     checkbox.addEventListener('change', () => {
       toggleTaskCompletion(task.id);
     });
 
-    // Event listener for delete button
     const deleteBtn = item.querySelector('.delete-btn');
     deleteBtn.addEventListener('click', () => {
       deleteTask(task.id);
@@ -295,9 +236,6 @@ function renderTasks() {
   });
 }
 
-/**
- * Security helper to prevent XSS in dynamic HTML
- */
 function escapeHtml(string) {
   const div = document.createElement('div');
   div.textContent = string;

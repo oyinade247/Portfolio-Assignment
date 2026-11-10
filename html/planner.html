@@ -6,12 +6,12 @@
   <meta name="description" content="Interactive Student Academic Planner - Add, complete, and organize university tasks for Favour Adedokun" />
   <title>Academic Planner | Favour Adedokun - Software Engineering</title>
   
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
-  <!-- Site Header & Navigation Bar -->
+  
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
@@ -41,7 +41,7 @@
   <main class="section-padding">
     <div class="container">
       
-      <!-- Section Header -->
+      
       <header class="section-header">
         <span class="badge">📅 Interactive JavaScript System</span>
         <h2>Student Academic Planner</h2>
@@ -51,10 +51,10 @@
         </p>
       </header>
 
-      <!-- Planner Layout: Form on Left, Dynamic Task Board on Right -->
+      
       <div class="planner-layout">
         
-        <!-- Left: Task Creation Form (HTML Form & Event Handling) -->
+        
         <section class="planner-form-card">
           <h3 style="font-size: 1.3rem; color: var(--text-brand); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
             <span>➕</span> Add New Academic Task
@@ -64,7 +64,7 @@
           </p>
 
           <form id="taskForm" novalidate>
-            <!-- Task Title -->
+            
             <div class="form-group">
               <label for="taskTitle" class="form-label">Task Description *</label>
               <input 
@@ -76,7 +76,7 @@
               />
             </div>
 
-            <!-- Course Code & Due Date -->
+            
             <div class="form-row">
               <div class="form-group">
                 <label for="taskCourse" class="form-label">Course Code *</label>
@@ -101,7 +101,7 @@
               </div>
             </div>
 
-            <!-- Priority -->
+            
             <div class="form-group">
               <label for="taskPriority" class="form-label">Urgency / Priority</label>
               <select id="taskPriority" class="form-control">
@@ -111,13 +111,13 @@
               </select>
             </div>
 
-            <!-- Submit Button -->
+            
             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
               <span>🌸</span> Add Task to Planner
             </button>
           </form>
 
-          <!-- Instructions Card -->
+          
           <div style="margin-top: 1.75rem; padding: 1.15rem; background: var(--bg-alt); border-radius: var(--radius-md); border: 1px dashed var(--border-color); font-size: 0.85rem; color: var(--text-muted);">
             <strong style="color: var(--text-brand);">💡 How It Works:</strong>
             <ul style="padding-left: 1.2rem; margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.35rem;">
@@ -128,10 +128,10 @@
           </div>
         </section>
 
-        <!-- Right: Task Board & Stats -->
+        
         <section class="planner-list-card">
           
-          <!-- Live Statistics Strip -->
+          
           <div class="planner-stats-strip">
             <div class="stat-box">
               <span class="stat-num" id="totalCount">0</span>
@@ -147,7 +147,7 @@
             </div>
           </div>
 
-          <!-- Filter Navigation Tabs -->
+          
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
             <h3 style="font-size: 1.2rem; color: var(--text-brand);">
               <span>📋</span> Current Tasks
@@ -160,9 +160,9 @@
             </div>
           </div>
 
-          <!-- Dynamic Task List Container (Populated via planner.js) -->
+          
           <div id="taskList" class="task-list" aria-live="polite">
-            <!-- JavaScript dynamically injects tasks here -->
+            
           </div>
 
         </section>
@@ -172,7 +172,7 @@
     </div>
   </main>
 
-  <!-- Site Footer -->
+  
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -217,9 +217,9 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/main.js"></script>
-  <script src="js/planner.js"></script>
+  
+  <script src="../js/main.js"></script>
+  <script src="../js/planner.js"></script>
 </body>
 </html>
 
