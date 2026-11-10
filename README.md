@@ -22,11 +22,13 @@ The theme is styled with an aesthetic, girlie, and modern feel (soft rose, lilac
 ## 📁 Project File Structure
 ```
 portfolio-assignment/
-├── index.html              # Page 1: Homepage (Name, photo, bio, multimedia, layout)
-├── about.html              # Page 2: About Me (Education, career aspirations, skills, timetable table)
-├── projects.html           # Page 3: Projects (Mega, Callerio, and MIVA StudyHub with live links)
-├── planner.html            # Page 4: Interactive Academic Planner (Add, complete, delete tasks)
-├── contact.html            # Page 5: Contact Page (Form with client-side JavaScript validation)
+├── index.html              # Root entrypoint (redirects seamlessly to html/index.html)
+├── html/
+│   ├── index.html          # Page 1: Homepage (Name, photo, bio, multimedia, layout)
+│   ├── about.html          # Page 2: About Me (Education, career aspirations, skills, timetable table)
+│   ├── projects.html       # Page 3: Projects (Mega, Callerio, and MIVA StudyHub with live links)
+│   ├── planner.html        # Page 4: Interactive Academic Planner (Add, complete, delete tasks)
+│   └── contact.html        # Page 5: Contact Page (Form with client-side JavaScript validation)
 ├── css/
 │   └── style.css           # External CSS stylesheet (Flexbox, Grid, animations, media queries)
 ├── js/
