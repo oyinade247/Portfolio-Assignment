@@ -37,7 +37,7 @@ portfolio-assignment/
 │   └── contact.js          # Form validation (required checks, email regex, digits-only phone)
 └── assets/
     ├── images/             # Real student photo (favour-adedokun.jpg) & project mockups
-    └── media/              # Multimedia files (welcome-audio.wav & video presentation poster)
+    └── media/              # Multimedia files (welcome-audio.wav)
 ```
 
 ---
@@ -50,7 +50,7 @@ portfolio-assignment/
   * Warm, personal welcome message.
   * Consistent navigation menu with active page highlighting.
   * Brief biography and academic metadata strip.
-  * Audio welcome note player (`<audio>`) and video presentation card (`<video>`).
+  * Audio welcome note player (`<audio>`).
 * **About Me Page (`about.html`)**:
   * Educational background timeline (MIVA Open University B.Sc. Software Engineering).
   * Career aspirations & 3-year milestones.
@@ -78,7 +78,7 @@ portfolio-assignment/
     * Real-time dynamic error clearing on user input.
 
 ### 2. Technical Requirements
-* **HTML**: Semantic elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<figure>`, `<figcaption>`), forms, tables, images with `alt` text, hyperlinks, lists (`<ul>`, `<ol>`), and multimedia elements (`<audio>` and `<video>`).
+* **HTML**: Semantic elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<figure>`, `<figcaption>`), forms, tables, images with `alt` text, hyperlinks, lists (`<ul>`, `<ol>`), and multimedia elements (`<audio>`).
 * **CSS**: Single external stylesheet (`css/style.css`), CSS variables (`:root`), Flexbox, CSS Grid, mobile-responsive navigation with hamburger toggle, smooth hover transitions, and mobile media queries (`@media (max-width: 900px)` and `@media (max-width: 768px)`).
 * **JavaScript**: Event listeners, DOM manipulation, form validation, dynamic list rendering, array methods (`filter`, `map`, `forEach`, `unshift`), and `localStorage`.
 

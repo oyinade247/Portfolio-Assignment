@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Interactive Student Academic Planner - Add, complete, and organize university tasks for Favour Adedokun" />
+  <meta name="description"
+    content="Interactive Student Academic Planner - Add, complete, and organize university tasks for Favour Adedokun" />
   <title>Academic Planner | Favour Adedokun</title>
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
   <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body>
 
   <header class="site-header">
@@ -38,18 +41,18 @@
 
   <main class="section-padding">
     <div class="container">
-      
+
       <header class="section-header">
         <span class="badge">Interactive Application</span>
         <h2>Student Academic Planner</h2>
         <p>
-          Organize coursework deadlines, manage practical submissions, monitor study objectives, 
+          Organize coursework deadlines, manage practical submissions, monitor study objectives,
           and track academic tasks in real time using client-side JavaScript.
         </p>
       </header>
 
       <div class="planner-layout">
-        
+
         <section class="planner-form-card">
           <h3 style="font-size: 1.25rem; color: var(--text-main); font-weight: 700; margin-bottom: 0.4rem;">
             Add Academic Task
@@ -61,13 +64,8 @@
           <form id="taskForm" novalidate>
             <div class="form-group">
               <label for="taskTitle" class="form-label">Task Description *</label>
-              <input 
-                type="text" 
-                id="taskTitle" 
-                class="form-control" 
-                placeholder="e.g. Finish COS 106 practical submission" 
-                required 
-              />
+              <input type="text" id="taskTitle" class="form-control"
+                placeholder="e.g. Finish COS 106 practical submission" required />
             </div>
 
             <div class="form-row">
@@ -76,9 +74,9 @@
                 <select id="taskCourse" class="form-control" required>
                   <option value="COS 106">COS 106 (Web Tech)</option>
                   <option value="SWE 102">SWE 102 (Software Eng.)</option>
-                  <option value="COS 101">COS 101 (Intro to CS)</option>
+                  <option value="COS 101">COS 102 (Problem Solving)</option>
                   <option value="MTH 101">MTH 101 (Mathematics)</option>
-                  <option value="GST 101">GST 101 (Use of English)</option>
+                  <option value="GST 101">GST 102 (Use of English)</option>
                   <option value="PHY 101">PHY 101 (Physics I)</option>
                   <option value="General">General / Personal</option>
                 </select>
@@ -86,11 +84,7 @@
 
               <div class="form-group">
                 <label for="taskDueDate" class="form-label">Target Due Date</label>
-                <input 
-                  type="date" 
-                  id="taskDueDate" 
-                  class="form-control" 
-                />
+                <input type="date" id="taskDueDate" class="form-control" />
               </div>
             </div>
 
@@ -108,7 +102,8 @@
             </button>
           </form>
 
-          <div style="margin-top: 1.75rem; padding: 1.15rem; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-main); font-size: 0.85rem; color: var(--text-muted);">
+          <div
+            style="margin-top: 1.75rem; padding: 1.15rem; background: var(--bg-subtle); border-radius: var(--radius-md); border: 1px solid var(--border-main); font-size: 0.85rem; color: var(--text-muted);">
             <strong style="color: var(--text-main); display: block; margin-bottom: 0.35rem;">Usage Guidelines:</strong>
             <ul style="padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.35rem;">
               <li>Toggle the checkbox to mark tasks as completed or pending.</li>
@@ -134,7 +129,8 @@
             </div>
           </div>
 
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
             <h3 style="font-size: 1.15rem; color: var(--text-main); font-weight: 700;">
               Task Records
             </h3>
@@ -160,7 +156,7 @@
         <div class="footer-brand">
           <h4>Favour Adedokun</h4>
           <p>
-            Software Engineering undergraduate at MIVA Open University. Focused on modern web standards, 
+            Software Engineering undergraduate at MIVA Open University. Focused on modern web standards,
             accessible design, and scalable frontend architectures.
           </p>
         </div>
@@ -197,4 +193,5 @@
   <script src="../js/main.js"></script>
   <script src="../js/planner.js"></script>
 </body>
+
 </html>
